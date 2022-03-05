@@ -6,8 +6,6 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN git clone -b feature/git_action https://github.com/jkbk2004/ufs-srweather-app
 WORKDIR /opt/ufs-srweather-app
 RUN ./manage_externals/checkout_externals
-#RUN sed -i 's/wgrib2_lib/wgrib2/g' ./src/UFS_UTILS/sorc/chgres_cube.fd/CMakeLists.txt
-#RUN sed -i '/wgrib2_api/d' ./src/UFS_UTILS/sorc/chgres_cube.fd/CMakeLists.txt
 RUN mkdir /opt/ufs-srweather-app/build
 WORKDIR /opt/ufs-srweather-app/build
 SHELL ["/bin/bash", "-c"]
